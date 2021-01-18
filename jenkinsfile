@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat "./mvnw.cmd clean compile -e"
+               dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
+                                    bat './mvnw.cmd clean compile -e'
             }
         }
 /*
@@ -21,5 +22,6 @@ pipeline {
                 '''
             }
         }*/
+        }
     }
 }
