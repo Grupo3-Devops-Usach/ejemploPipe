@@ -17,8 +17,8 @@ pipeline {
 
             stage('test2') {
                 steps {
-                   dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
-                               bat 'curl -X GET "http://localhost:8080/rest/mscovid/test?msg=testing"'
+                    dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
+                               bat './mvnw.cmd clean test -e'
                 }
             }
         }
