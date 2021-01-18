@@ -1,27 +1,27 @@
 pipeline {
     agent any
     
-    stages {
-            stage('Build') {
-                steps {
-                dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
-                                        bat './mvnw.cmd clean compile -e'
-                }
-            }
-
-            stage('test') {
-                 dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
-                               bat './mvnw.cmd clean test -e'
-                }
-            }
-
+        stages {
+                stage('Build') {
+                    steps {
+                    dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
+                                            bat './mvnw.cmd clean compile -e'
+                            }
+                        }
+                    }
+                stage('test') {
+                    steps {
+                    dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
+                                bat './mvnw.cmd clean test -e'
+                        }
+                        }
+                    }
                 stage('test2') {
                     steps {
                         dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
                                 bat './mvnw.cmd clean test -e'
+                       }
                     }
                 }
-            }
-        }
-    }
+        }   
 }
