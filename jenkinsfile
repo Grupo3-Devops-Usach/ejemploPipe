@@ -15,10 +15,11 @@ pipeline {
                 }
             }
 
-            stage('test2') {
-                steps {
-                    dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
-                               bat './mvnw.cmd clean test -e'
+                stage('test2') {
+                    steps {
+                        dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
+                                bat './mvnw.cmd clean test -e'
+                    }
                 }
             }
         }
