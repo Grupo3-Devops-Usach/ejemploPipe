@@ -2,24 +2,19 @@ pipeline {
     agent any
     
     stages {
-            stage('Build') {
-                steps {
-                dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
-                                        bat './mvnw.cmd clean compile -e'
-                }
+        stage('Build') {
+            steps {
+                bat "mvnw.cmd clean"
             }
 
-            stage('test') {
-                 dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
-                               bat './mvnw.cmd clean test -e'
-                }
+        stage('test') {
+            steps {
+                bat "mvnw.cmd compile"
             }
 
-            stage('test2') {
-                steps {
-                   dir('C:\\Users\\AKLSNK\\Desktop\\clases DevOps\\Develoment\\Jenkinsfile\\ejemplo-maven'){
-                               bat 'curl -X GET "http://localhost:8080/rest/mscovid/test?msg=testing"'
-                }
+        stage('test2') {
+            steps {
+                bat "mvnw.cmd test"
             }
         }
     }
