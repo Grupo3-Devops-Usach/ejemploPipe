@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "a568a089-219e-4484-b722-dba9aa459eac",
-		"name": "Ejemplo-Clase",
+		"name": "ejemploPipe",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f719f628-41dc-4695-bc77-95249170b55f",
 						"exec": [
 							"const responseJson = pm.response.json();\r",
 							"\r",
@@ -23,7 +22,7 @@
 							" pm.expect(pm.response.responseTime).to.be.below(1200);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Codigo content euro\",() => {\r",
+							"pm.test(\"Codigo content uf\",() => {\r",
 							"  pm.expect(responseJson.codigo).to.eql(\"uf\");\r",
 							"});\r",
 							"\r",
@@ -31,7 +30,7 @@
 							"  pm.response.to.have.header(\"Content-Type\");\r",
 							"});\r",
 							"\r",
-							"pm.test(\"nombre is Euro\", () => {\r",
+							"pm.test(\"nombre es Unidad de fomento (UF), unidad de medida Pesos\", () => {\r",
 							"  const responseJson = pm.response.json();\r",
 							"  pm.expect(responseJson.nombre).to.eql(\"Unidad de fomento (UF)\");\r",
 							"  pm.expect(responseJson.unidad_medida).to.eql(\"Pesos\");\r",
@@ -65,7 +64,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6e0dbba1-2241-4e5a-ac52-7015624997ce",
 						"exec": [
 							"const responseJson = pm.response.json();\r",
 							"\r",
@@ -85,7 +83,7 @@
 							"  pm.response.to.have.header(\"Content-Type\");\r",
 							"});\r",
 							"\r",
-							"pm.test(\"nombre is Euro\", () => {\r",
+							"pm.test(\"nombre is Euro, unidad de medida Pesos\", () => {\r",
 							"  const responseJson = pm.response.json();\r",
 							"  pm.expect(responseJson.nombre).to.eql(\"Euro\");\r",
 							"  pm.expect(responseJson.unidad_medida).to.eql(\"Pesos\");\r",
@@ -113,6 +111,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
