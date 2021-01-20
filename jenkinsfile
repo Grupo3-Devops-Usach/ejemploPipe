@@ -4,19 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat "mvnw.cmd clean"
+                bat "mvn clean -e"
             }
         }
 
         stage('test') {
             steps {
-                bat "mvnw.cmd compile"
+                bat "mvn clean compile -e"
             }
         }
 
         stage('test2') {
             steps {
-                bat "mvnw.cmd test"
+                bat "mvn test -e"
+                
             }
         }
     }
